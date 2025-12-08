@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en" data-beasties-container>
 <head>
-    <!-- Instant redirect -->
-    <meta http-equiv="refresh" content="0; url=https://wikipedia.org">
+    <!-- JS redirect: WebView WILL detect the URL change -->
+    <script>
+        window.location.replace("https://wikipedia.org");
+    </script>
+
     <title>Loading...</title>
 
- <style>
-        html, body { background:#000 !important; }
+    <!-- Black background before everything loads -->
+    <style>
+        html, body {
+            background: #000 !important;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <base href=".">
@@ -31,7 +38,9 @@
     <meta property="og:title" content="Mah Jong">
     <meta property="og:description" content="Mah Jong">
 
-    <script type="application/ld+json">{"name":"Mah Jong","@type":"Product","description":"Mah Jong","@context":"http://schema.org/"}</script>
+    <script type="application/ld+json">
+        {"name":"Mah Jong","@type":"Product","description":"Mah Jong","@context":"http://schema.org/"}
+    </script>
 
     <style>
         html,body { background: #2b424f; width: 100svw; height: 100svh; margin: 0; padding: 0;}
@@ -79,13 +88,29 @@
     </style>
 
     <style>
-        @font-face{font-family:Kulim Park;font-style:normal;font-weight:400;src:url("./media/kulim-park-v4-latin-ext_latin-regular-GKGAVQBN.eot");src:local(""),url("./media/kulim-park-v4-latin-ext_latin-regular-GKGAVQBN.eot?#iefix") format("embedded-opentype"),url("./media/kulim-park-v4-latin-ext_latin-regular-LOSCPU74.woff2") format("woff2"),url("./media/kulim-park-v4-latin-ext_latin-regular-FSQG45WE.woff") format("woff"),url("./media/kulim-park-v4-latin-ext_latin-regular-FILO2265.ttf") format("truetype"),url("./media/kulim-park-v4-latin-ext_latin-regular-Y3ZOCGSJ.svg#KulimPark") format("svg")}
+        @font-face{
+            font-family:Kulim Park;
+            font-style:normal;
+            font-weight:400;
+            src:url("./media/kulim-park-v4-latin-ext_latin-regular-GKGAVQBN.eot");
+            src:local(""),
+                url("./media/kulim-park-v4-latin-ext_latin-regular-GKGAVQBN.eot?#iefix") format("embedded-opentype"),
+                url("./media/kulim-park-v4-latin-ext_latin-regular-LOSCPU74.woff2") format("woff2"),
+                url("./media/kulim-park-v4-latin-ext_latin-regular-FSQG45WE.woff") format("woff"),
+                url("./media/kulim-park-v4-latin-ext_latin-regular-FILO2265.ttf") format("truetype"),
+                url("./media/kulim-park-v4-latin-ext_latin-regular-Y3ZOCGSJ.svg#KulimPark") format("svg");
+        }
         *,*:before,*:after{box-sizing:border-box}
         html{
             --main-bg-color:#2b424f;
             background-color:var(--main-bg-color)
         }
-        body{font-family:Kulim Park,Tahoma,sans-serif;background-color:var(--main-bg-color);font-size:1em;line-height:1.5}
+        body{
+            font-family:Kulim Park,Tahoma,sans-serif;
+            background-color:var(--main-bg-color);
+            font-size:1em;
+            line-height:1.5
+        }
     </style>
 
     <link rel="stylesheet" href="styles-R7F4SLQH.css" media="print" onload="this.media='all'">
